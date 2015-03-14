@@ -1,9 +1,14 @@
-FROM debian:jessie
+FROM centos:6
 
-MAINTAINER Johannes 'fish' Ziemke <docker@freigeist.org> @discordianfish
+MAINTAINER Ricardson 'rwcs' Williams <ricardsonwilliams@gmail.com>
 
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get -qy update && apt-get -qy install opensmtpd
+RUN yum -y update && yum clean all
+RUN yum -y install epel-release
+RUN yum -y install opensmtpd
+
 RUN /bin/echo -e 'listen on 0.0.0.0\naccept from any for any relay' > /etc/smtpd.conf
+RUN cat /etc/smtpd.conf
+
 EXPOSE 25
+
 ENTRYPOINT [ "smtpd", "-d" ]
