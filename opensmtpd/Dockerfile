@@ -1,4 +1,4 @@
-FROM centos:6
+FROM centos:latest
 
 MAINTAINER Ricardson 'rwcs' Williams <ricardsonwilliams@gmail.com>
 
@@ -7,7 +7,7 @@ RUN yum -y install epel-release
 RUN yum -y install opensmtpd
 
 RUN /bin/echo -e 'listen on 0.0.0.0\naccept from any for any relay' > /etc/smtpd.conf
-RUN cat /etc/smtpd.conf
+RUN cat /etc/opensmtpd/smtpd.conf
 
 EXPOSE 25
 
