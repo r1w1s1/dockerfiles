@@ -6,7 +6,7 @@ RUN yum -y update && yum clean all
 RUN yum -y install epel-release
 RUN yum -y install unbound bind-utils 
 
-COPY cache.conf /etc/unbound/unbound.conf.d/cache.conf
+COPY cache.conf /etc/unbound/conf.d 
 
 EXPOSE 53/udp
 
