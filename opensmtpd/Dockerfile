@@ -6,7 +6,7 @@ RUN yum -y update && yum clean all
 RUN yum -y install epel-release
 RUN yum -y install opensmtpd
 
-RUN /bin/echo -e 'listen on 0.0.0.0\naccept from any for any relay' > /etc/smtpd.conf
+RUN /bin/echo -e 'listen on 0.0.0.0\naccept from any for any relay' > /etc/opensmtpd/smtpd.conf
 RUN cat /etc/opensmtpd/smtpd.conf
 
 EXPOSE 25
