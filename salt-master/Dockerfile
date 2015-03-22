@@ -15,5 +15,3 @@ RUN systemctl start salt-master.service
 RUN systemctl start salt-minion.service
 
 EXPOSE 4505 4506
-
-###ENTRYPOINT [ "smtpd", "-d" ]
