@@ -6,7 +6,7 @@ RUN yum -y update && yum clean all
 RUN yum -y install epel-release
 
 RUN yum -y install bind-utils
-RUN yum -y instal dmidecode
+RUN yum -y install dmidecode
 
 RUN curl -s -L https://bootstrap.saltstack.com -o - | sh -s -- -M -X -D
 RUN sed "s/master:.*/master: localhost/" /etc/salt/minion > /etc/salt/minion
