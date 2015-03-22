@@ -9,7 +9,7 @@ RUN yum -y install bind-utils
 RUN yum -y instal dmidecode
 
 RUN curl -s -L https://bootstrap.saltstack.com -o - | sh -s -- -M -X -D
-##RUN sed "s/master:.*/master: $IP/" /etc/salt/minion > /etc/salt/minion
+RUN sed "s/master:.*/master: localhost/" /etc/salt/minion > /etc/salt/minion
 
 RUN systemctl start salt-master.service 
 RUN systemctl start salt-minion.service
