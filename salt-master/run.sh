@@ -13,4 +13,4 @@ LOG_LEVEL=${LOG_LEVEL:-"error"}
 exec /usr/bin/salt-master --log-level=$LOG_LEVEL
 
 # Run Salt Minion
-exec /usr/bin/salt-minion
+exec /usr/bin/salt-minion -d
