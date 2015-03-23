@@ -5,6 +5,11 @@
     docker build -t saltmaster .
     docker run -d -p 4505:4505/tcp -p 4506:4506/tcp -P --name test_saltmaster saltmaster 
 
+# shutdown
+
+     docker stop test_saltmaster
+     docker rm test_saltmaster
+     docker rmi saltmaster 
 
 The following ports are exposed:
 
@@ -27,9 +32,3 @@ docker exec -t saltmaster "salt '*' test.ping"
 To accept a new minion run the following command (replace `<minion_id>` with the actual id):
 ```
 docker exec -t saltmaster salt-key -a <minion_id>
-
-# shutdown
-
-     docker stop test_saltmaster
-     docker rm test_saltmaster
-     docker rmi saltmaster 
