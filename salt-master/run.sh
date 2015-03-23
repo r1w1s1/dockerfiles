@@ -12,5 +12,3 @@ LOG_LEVEL=${LOG_LEVEL:-"error"}
 # Run Salt as a Deamon
 exec /usr/bin/salt-master --log-level=$LOG_LEVEL
 
-# Run Salt Minion
-exec /usr/bin/salt-minion -d
