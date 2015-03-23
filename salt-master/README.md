@@ -28,7 +28,6 @@ To accept a new minion run the following command (replace `<minion_id>` with the
 ```
 docker exec -t saltmaster salt-key -a <minion_id>
 
-
 # shutdown
 
      docker stop test_saltmaster
