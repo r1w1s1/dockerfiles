@@ -24,7 +24,7 @@ To run commands in your master container use the `docker exec` command. (This ne
 
 For example:
 ```
-docker exec -t saltmaster "salt '*' test.ping"
+docker exec -t test_saltmaster salt '*' test.ping
 ```
 
 ### Accepting new minions
