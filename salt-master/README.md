@@ -31,4 +31,4 @@ docker exec -t test_saltmaster salt '*' test.ping
 
 To accept a new minion run the following command (replace `<minion_id>` with the actual id):
 ```
-docker exec -t saltmaster salt-key -a <minion_id>
+docker exec -t test_saltmaster salt-key -a <minion_id>
