@@ -1,4 +1,4 @@
-# OpenSMTPD Server 
+# OpenSMTPD Server [https://www.opensmtpd.org]
 
 ### start
 
