@@ -1,4 +1,4 @@
-# OpenSMTP Server 
+# OpenSMTPD Server 
 
 ### start
 
