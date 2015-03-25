@@ -11,7 +11,7 @@
      docker rm test_saltmaster
      docker rmi saltmaster
 
-The following ports are exposed: (SaltStack)
+The following ports are exposed:
 
  * `30350`
  * `4505`
