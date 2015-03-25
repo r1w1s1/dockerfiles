@@ -1,11 +1,11 @@
-# Docker Files
+# Salt Master
 
-# start
+### start
 
     docker build -t saltmaster .
     docker run -d -p 4505:4505/tcp -p 4506:4506/tcp -P --name test_saltmaster saltmaster 
 
-# shutdown
+### shutdown
 
      docker stop test_saltmaster
      docker rm test_saltmaster
@@ -18,7 +18,7 @@ The following ports are exposed:
 
 These ports allow minions to communicate with the Salt Master.
 
-## Running Salt Commands
+### Running Salt Commands
 
 To run commands in your master container use the `docker exec` command. (This needs at least docker 1.3)
 
