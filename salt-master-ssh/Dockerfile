@@ -24,3 +24,5 @@ RUN echo 'root:root' | chpasswd
 COPY supervisord.ini /etc/supervisord.d/
 
 EXPOSE 22 4505 4506
+
+CMD ["/usr/bin/supervisord"]
