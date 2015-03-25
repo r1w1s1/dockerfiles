@@ -2,7 +2,7 @@ FROM centos:7
 
 MAINTAINER Ricardson 'rwcs' Williams <ricardsonwilliams@gmail.com>
 
-RUN yum -y epel-release ; yum clean all
+RUN yum -y intall epel-release ; yum clean all
 RUN yum -y update; yum clean all
 RUN yum -y install openssh-server passwd supervisor ; yum clean all
 
