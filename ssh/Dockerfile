@@ -1,14 +1,11 @@
-# sshd
-#
-# VERSION               0.0.1
-
-FROM centos:7
+FROM centos:latest
 
 MAINTAINER Ricardson 'rwcs' Williams <ricardsonwilliams@gmail.com>
 
-RUN yum -y install openssh openssh-server openssh-clients sudo passwd sed supervisor ; yum clean all
+RUN yum -y update; yum clean all
+RUN yum -y install openssh-server passwd supervisor ; yum clean all
 
-RUN sshd-keygen
+RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
 RUN sed -i "s/#UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config && sed -i "s/UsePAM.*/UsePAM no/g" /etc/ssh/sshd_config
 
 RUN echo 'root:root' | chpasswd
