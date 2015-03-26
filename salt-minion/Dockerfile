@@ -7,7 +7,7 @@ RUN curl -s -L https://bootstrap.saltstack.com -o - | sh -s -- -X -D
 RUN yum -y install bind-utils dmidecode supervisor ; yum clean all
 
 #Setting minion configuration
-RUN sed -i "s/#master:.*/master: localhost/g" /etc/salt/minion
+RUN sed -i "s/#master:.*/master: 172.17.0.10/g" /etc/salt/minion
 
 COPY supervisord.ini /etc/supervisord.d/
 
