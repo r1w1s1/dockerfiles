@@ -1,12 +1,12 @@
 # Docker Files
 
-# build
+## build
 
 ```  
 docker build -t awscli .
 ```
 
-# start
+## start
 
 ```
 sudo docker run -rm \
@@ -15,7 +15,7 @@ sudo docker run -rm \
                 awscli
 
 ```
-# testing 
+## testing 
 
 ```
 sudo docker run -it \
@@ -23,9 +23,9 @@ sudo docker run -it \
                 awscli sts get-caller-identity
 
 
-``
+``` 
 
-# Add to .bashrc
+## Add to .bashrc
 
 ```
 alias aws='sudo docker run -it -v ${PWD}/.aws:/root/.aws awscli'
