@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  docker-sshd:
+    build:
+      context: .
+    image: sshd 
+    ports:
+      - "30350:22"
