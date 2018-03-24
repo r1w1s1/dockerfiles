@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+MAINTAINER Ricardson 'rwcs' Williams <ricardsonwilliams@gmail.com>
+
 RUN \
     apk --no-cache add \
     pdns-recursor
