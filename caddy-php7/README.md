@@ -1,4 +1,4 @@
-## Caddy Webserver with PHP Support
+## Caddy Webserver with PHP7 Support
 
 A [Docker](http://docker.com) image for [Caddy](http://caddyserver.com) based on [Alpine Linux](https://alpinelinux.org/)
 
