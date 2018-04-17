@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  docker-http:
+    build:
+      context: .
+    image: http 
+    ports:
+      - "80:80"
+    #volumes:
+    #  - /srv/docker/apache2/prod:/var/www/localhost/htdocs
+
