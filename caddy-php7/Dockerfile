@@ -24,7 +24,7 @@ RUN \
         php7-mysqlnd \
         php7-enchant \
         php7-pspell \
-        php7-redis \ 
+        php7-redis \
         php7-snmp \
         php7-doc \
         php7-fileinfo \
@@ -90,7 +90,7 @@ RUN \
         php7-pear-net_smtp-doc \
         php7-simplexml \
         php7-xmlwriter 
- 
+
 VOLUME /srv
 WORKDIR /srv
 
