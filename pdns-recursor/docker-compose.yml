@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  pdns-recursor:
+    build:
+      context: .
+    image: pdns-recursor 
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+
