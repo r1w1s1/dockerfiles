@@ -7,6 +7,5 @@ services:
     image: http 
     ports:
       - "80:80"
-      - "30350:22"
     #volumes:
     #  - /srv/docker/apache:/var/www/localhost/htdocs

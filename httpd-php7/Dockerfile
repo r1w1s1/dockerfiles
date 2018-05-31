@@ -5,7 +5,7 @@ MAINTAINER Ricardson Williams <ricardsonwilliams@gmail.com>
 RUN \
 	apk --no-cache add \
 	apache2 \
-        openssh \
+    openssh \
 	php7 \
 	php7-apache2 \
 	php7-intl \
@@ -26,8 +26,8 @@ RUN \
 	php7-mysqlnd \
 	php7-enchant \
 	php7-pspell \
-	php7-redis \ 
-	php7-snmp \
+	php7-redis \
+    php7-snmp \
 	php7-doc \
 	php7-fileinfo \
 	php7-mbstring \
