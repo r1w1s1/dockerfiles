@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  httpd-php71:
+    build:
+      context: .
+    image: http 
+    ports:
+      - "80:80"
+    #volumes:
+    #  - /srv/docker/apache:/var/www/localhost/htdocs
