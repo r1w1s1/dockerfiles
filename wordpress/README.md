@@ -1,7 +1,7 @@
 ## Wordpress
 
 
-[caddyserver](https://github.com/mholt/caddy) as proxy in front of [wordpress](https://store.docker.com/images/wordpress) oficial image and [mysql](https://store.docker.com/images/mysql) 5.7.
+[caddyserver](https://github.com/mholt/caddy) as proxy in front of [wordpress 4.9.6](https://store.docker.com/images/wordpress) oficial image(based on php 7.2) and [mysql](https://store.docker.com/images/mysql) 5.7.
 
 By default mysql accepts connection from outside, if you want disable, just take out from `docker-compose.yml` the below lines
 
