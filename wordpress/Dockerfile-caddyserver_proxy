@@ -1,0 +1,17 @@
+FROM alpine:3.7 
+
+MAINTAINER Ricardson Williams <ricardsonwilliams@gmail.com>
+
+RUN \
+	apk --no-cache add \
+	caddy
+
+VOLUME /srv
+WORKDIR /srv
+
+ADD Caddyfile /etc/Caddyfile
+
+EXPOSE 80
+
+ENTRYPOINT ["/usr/sbin/caddy"]
+CMD ["--conf", "/etc/Caddyfile"]

@@ -1,0 +1,9 @@
+http://0.0.0.0
+
+proxy / wordpress:80 {
+    transparent
+ }
+
+gzip
+log stdout
+errors stdout

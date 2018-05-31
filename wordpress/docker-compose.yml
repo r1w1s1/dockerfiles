@@ -1,0 +1,46 @@
+version: '2'
+services:
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:4.9.6
+    restart: always
+    volumes:
+      - ./wp-content:/var/www/html/wp-content 
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_PASSWORD: password
+    networks:
+      - back
+  db:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - back
+    ports:
+      - 3306:3306
+  caddyserver_proxy:
+    links:
+      - "wordpress"
+    depends_on:
+      - wordpress
+    image: caddyserver
+    build:
+      context: .
+      dockerfile: Dockerfile-caddyserver_proxy
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - CADDYPATH=/etc/caddycerts
+    volumes:
+      - ./caddy/.caddy:/etc/caddycerts 
+      - ./Caddyfile:/etc/Caddyfile
+    networks:
+      - back
+networks:
+  back:
