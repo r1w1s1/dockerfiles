@@ -1,8 +1,16 @@
 ## Wordpress
 
 
-Caddyserver as proxy in front of wordpress oficial image(based on apache) and mysql 5.7
+Caddyserver as proxy in front of wordpress oficial image(based on apache) and mysql 5.7.
 
+By default mysql accepts connection from outside, if you want disable, just take out from `docker-compose.yml` the below lines
+
+```yaml 
+
+ ports:
+   - 3306:3306
+
+```
 
 ## build
 
@@ -16,5 +24,5 @@ docker-compose build
 docker-compose up -d
 ```
 
-Just open http://localhost, and start to configure your wordpress, the `wp_content` and `mysql_data` will be persist on
+Just open http://YOUR_IP, and start to configure your wordpress, the `wp_content` and `mysql_data` will be persist on
 host machine.
