@@ -5,7 +5,7 @@ MAINTAINER Ricardson Williams <ricardsonwilliams@gmail.com>
 RUN \
 	apk --no-cache add \
 	apache2 \
-    openssh \
+        openssh \
 	php7 \
 	php7-apache2 \
 	php7-intl \
@@ -27,7 +27,7 @@ RUN \
 	php7-enchant \
 	php7-pspell \
 	php7-redis \
-    php7-snmp \
+        php7-snmp \
 	php7-doc \
 	php7-fileinfo \
 	php7-mbstring \
@@ -92,7 +92,7 @@ RUN \
 	php7-pear-net_smtp-doc \
 	php7-simplexml \
 	php7-xmlwriter \
-    && mkdir -p /run/apache2 \
+        && mkdir -p /run/apache2 \
 	&& sed -ri 's/#ServerName www.example.com:80/ServerName localhost:80/g' /etc/apache2/httpd.conf \
 	&& sed -ri 's/AllowOverride None/AllowOverride All/g' /etc/apache2/httpd.conf \
 	&& sed -ri -e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' \
