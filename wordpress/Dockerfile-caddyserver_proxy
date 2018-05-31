@@ -12,6 +12,7 @@ WORKDIR /srv
 ADD Caddyfile /etc/Caddyfile
 
 EXPOSE 80
+EXPOSE 443
 
 ENTRYPOINT ["/usr/sbin/caddy"]
 CMD ["--conf", "/etc/Caddyfile"]
