@@ -1,4 +1,4 @@
-# Wordpress
+## Wordpress
 
 
 Caddyserver as proxy in front of wordpress oficial image(based on apache) and mysql 5.7
@@ -15,3 +15,6 @@ docker-compose build
 ```
 docker-compose up -d
 ```
+
+Just open http://localhost, and start to configure your wordpress, the `wp_content` and `mysql_data` will be persint on
+host machine.
