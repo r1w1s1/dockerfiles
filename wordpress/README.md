@@ -16,5 +16,5 @@ docker-compose build
 docker-compose up -d
 ```
 
-Just open http://localhost, and start to configure your wordpress, the `wp_content` and `mysql_data` will be persint on
+Just open http://localhost, and start to configure your wordpress, the `wp_content` and `mysql_data` will be persist on
 host machine.
