@@ -97,9 +97,7 @@ RUN \
 	&& sed -ri 's/AllowOverride None/AllowOverride All/g' /etc/apache2/httpd.conf \
 	&& sed -ri -e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' \
 		-e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' \
-		/etc/apache2/httpd.conf \
-	&& sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config \
-	&& echo "root:root" | chpasswd
+		/etc/apache2/httpd.conf
 
 VOLUME /srv
 WORKDIR /srv
