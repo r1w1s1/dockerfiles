@@ -6,7 +6,7 @@ services:
     image: wordpress:4.9.6
     restart: always
     volumes:
-      - ./wp-content:/var/www/html/wp-content 
+      - ./data/wp-content:/var/www/html/wp-content 
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_PASSWORD: password
@@ -16,7 +16,7 @@ services:
     image: mysql:5.7
     restart: always
     volumes:
-      - ./mysql_data:/var/lib/mysql
+      - ./data/mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
     networks:
@@ -38,7 +38,7 @@ services:
     environment:
       - CADDYPATH=/etc/caddycerts
     volumes:
-      - ./caddy/.caddy:/etc/caddycerts 
+      - ./data/caddy/.caddy:/etc/caddycerts 
       - ./Caddyfile:/etc/Caddyfile
     networks:
       - back
