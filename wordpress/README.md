@@ -12,6 +12,14 @@ By default mysql accepts connection from outside, if you want disable, just take
 
 ```
 
+The `wp-data` should use the same user/group in the host machine, because the wordpress images uses apache thats run by www-data user (id/gid 33:33)
+
+```sh
+
+chmod 33:33 wp_data -R
+
+```
+
 ## build
 
 ```  
