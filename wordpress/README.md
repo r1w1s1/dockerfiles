@@ -32,5 +32,17 @@ docker-compose build
 docker-compose up -d
 ```
 
+## wp-cli (Manage WordPress through the command-line)
+
+You can use wp-cli to manage Wordpress
+
+```sh
+
+alias wp="docker-compose run --rm my-wpcli"
+wp --info
+
+```
+
+
 Just open `http://YOUR_IP`, and start to configure your wordpress, the `wp_content` and `mysql_data` will be persist on
 host machine.
