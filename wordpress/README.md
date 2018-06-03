@@ -38,7 +38,7 @@ You can use wp-cli to manage Wordpress
 
 ```sh
 
-alias wp="docker-compose run --rm my-wpcli"
+alias wp="docker-compose run --rm wp-cli"
 wp --info
 
 ```
