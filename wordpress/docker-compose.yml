@@ -6,7 +6,7 @@ services:
     image: wordpress:4.9.6
     restart: always
     volumes:
-      - ./data/wp-content:/var/www/html/wp-content 
+      - ./data/wp-data:/var/www/html/
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_PASSWORD: password
