@@ -17,6 +17,16 @@ services:
       retries: 3
     networks:
       - back
+  wp-cli:
+    depends_on:
+      - db
+    image: wordpress:cli-php7.2
+    volumes:
+      - ./data/wp-data:/var/www/html/
+    entrypoint: wp  
+    command: "--info"
+    networks:
+      - back
   db:
     image: mysql:5.7
     restart: always
