@@ -16,7 +16,7 @@ The `wp-data` should use the same user/group in the host machine, because the wo
 
 ```sh
 
-chmod 33:33 wp_data -R
+chown 33:33 wp_data -R
 
 ```
 
