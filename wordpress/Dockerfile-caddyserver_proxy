@@ -4,7 +4,8 @@ MAINTAINER Ricardson Williams <ricardsonwilliams@gmail.com>
 
 RUN \
 	apk --no-cache add \
-	caddy
+	caddy \
+	curl
 
 VOLUME /srv
 WORKDIR /srv
