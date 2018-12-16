@@ -11,3 +11,10 @@ docker build -t opsmop .
 ```
 sudo docker run -it opsmop /bin/sh
 ```
+
+## running hello.py
+
+```
+python3 hello.py --apply --local
+cat /tmp/foo.txt
+```
