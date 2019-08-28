@@ -4,9 +4,9 @@ MAINTAINER Ricardson 'rwcs' Williams <ricardsonwilliams@gmail.com>
 
 RUN apk --no-cache add \
 	ca-certificates \
-        groff \
-	    nodejs \
-	    npm
+    groff \
+	nodejs \
+	npm
 
 RUN npm install -g aws-cdk
 
