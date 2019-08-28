@@ -20,5 +20,5 @@ sudo docker run -it awscdk --version
 ## Add to .bashrc
 
 ```
-alias aws='sudo docker run -it awscdk'
+alias cdk='sudo docker run -it awscdk'
 ```
