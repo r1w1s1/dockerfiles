@@ -1,17 +1,36 @@
-FROM alpine:latest
-MAINTAINER "HashiCorp Terraform Team <terraform@hashicorp.com>"
+# DESCRIPTION:   Terraform container
+# AUTHOR:        Ricardson Williams <ricardsonwilliams@gmail.com.br>
+# COMMENTS:
+#    Terraform build based on Amazon Linux 2 LTS (https://aws.amazon.com/amazon-linux-2/)
+#
+# USAGE:
+#    # Download Dockerfile
+#    
+#
+#    # Build image
+#    docker build -t terraform .
+#
+#    # Run the image
+#    docker run -it terraform .
+#
+#    # Add into .bashrc
+#    alias terraform='sudo docker run -it terraform'
+#
+FROM amazonlinux:2
 
-ENV TERRAFORM_VERSION=0.11.7
-ENV TERRAFORM_SHA256SUM=6b8ce67647a59b2a3f70199c304abca0ddec0e49fd060944c26f666298e23418
+ENV TERRAFORM_VERSION=0.12.8
 
-RUN apk --no-cache add --update \
-    git \
-    curl \
-    openssh \
+RUN \
+    yum -y install unzip \
     && curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip > terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
     && echo "${TERRAFORM_SHA256SUM}  terraform_${TERRAFORM_VERSION}_linux_amd64.zip" > terraform_${TERRAFORM_VERSION}_SHA256SUMS \
-    && sha256sum -cs terraform_${TERRAFORM_VERSION}_SHA256SUMS \
     && unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin \
     && rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+
+###Final Image###
+
+FROM amazonlinux:2
+
+COPY --from=0 /bin/terraform /bin/terraform
 
 ENTRYPOINT ["/bin/terraform"]
