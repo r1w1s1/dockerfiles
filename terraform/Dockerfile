@@ -5,7 +5,7 @@
 #
 # USAGE:
 #    # Download Dockerfile
-#    
+#    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/terraform/Dockerfile
 #
 #    # Build image
 #    docker build -t terraform .
