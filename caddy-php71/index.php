@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Apache with PHP Support - CentOS 7</title>
+<title>Apache with PHP Support - Alpine Linux</title>
 <style>
     body {
         text-align: center;
