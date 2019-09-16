@@ -4,7 +4,7 @@ MAINTAINER Ricardson 'rwcs' Williams <ricardsonwilliams@gmail.com>
 
 RUN apk --no-cache add \
 	ca-certificates \
-    groff \
+        groff \
 	nodejs \
 	npm
 
