@@ -5,11 +5,12 @@
 #
 # USAGE:
 #    # Download Dockerfile
-#    
+#    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/ruby-2.5.1/Dockerfile
 #
 #    # Build ruby image
 #    docker build -t ruby-2.5.1-amazonlinux .
 #
+#    # Run the image
 #    docker run -it ruby-2.5.1-amazonlinux
 #
 #
