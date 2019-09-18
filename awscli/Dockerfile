@@ -1,20 +1,30 @@
-# DESCRIPTION:   AWS CDK tool container
+# DESCRIPTION:   AWS CLI container
 # AUTHOR:        Ricardson Williams <ricardsonwilliams@gmail.com.br>
 # COMMENTS:
-#    Build AWS CDK tool.
+#    Build AWS CLI.
 #
 # USAGE:
 #    # Download Dockerfile
-#    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/awscdk/Dockerfile
+#    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/awscli/Dockerfile
 #
 #    # Build ruby image
-#    docker build -t awscdk .
+#    docker build -t awscli .
 #
 #    # Run the image
-#    docker run -it awscdk
+#    docker run -rm \
+#               -it \
+#               -v ${PWD}/.aws:/root/.aws \
+#               awscli
 #
+#    # Test image
+#    docker run -it \
+#               -v ${PWD}/.aws:/root/.aws \
+#               awscli sts get-caller-identity
 #
-
+#    
+#    #Add to .bashrc
+#    alias aws='sudo docker run -it -v ${PWD}/.aws:/root/.aws awscli'
+#
 FROM alpine:latest
 
 MAINTAINER Ricardson 'rwcs' Williams <ricardsonwilliams@gmail.com>
