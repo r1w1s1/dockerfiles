@@ -85,8 +85,10 @@ RUN \
     mkdir -p "$GEM_HOME" "$BUNDLE_BIN" \
     && chmod 777 "$GEM_HOME" "$BUNDLE_BIN" \
     && yum -y install libyaml \
+    && yum clean all \
     && rm -rf /usr/share/doc/* \
-    && rm -rf /usr/share/info/*
+    && rm -rf /usr/share/info/* \
+    && rm -rf rm -rf /var/cache/yum/*
 
 COPY --from=0 /usr/local/ /usr/local/
 
