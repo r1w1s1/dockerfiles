@@ -1,5 +1,5 @@
 # DESCRIPTION:   Ruby 2.6.6 container
-# AUTHOR:        Ricardson Williams <ricardsonwilliams@gmail.com.br>
+# AUTHOR:        https://github.com/r1williams
 # COMMENTS:
 #    Build Ruby 2.6.6 based on Ubuntu 20.04
 #
