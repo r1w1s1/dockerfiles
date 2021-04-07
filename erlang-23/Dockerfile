@@ -8,10 +8,10 @@
 #    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/erlang-23/Dockerfile
 #
 #    # Build ruby image
-#    docker build -t erlang-23-ubuntu2004 .
+#    docker build -t erlang-23-ubuntu:20.04 .
 #
 #    # Run the image
-#    docker run -it erlang-23-ubuntu2004
+#    docker run -it erlang-23-ubuntu:20.04
 #
 #
 FROM ubuntu:20.04

@@ -8,10 +8,10 @@
 #    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/elixir-1.11.4/Dockerfile
 #
 #    # Build ruby image
-#    docker build -t elixir-1.11.4-ubuntu2004 .
+#    docker build -t elixir-1.11.4-ubuntu:20.04 .
 #
 #    # Run the image
-#    docker run -it elixir-1.11.4-ubuntu2004
+#    docker run -it elixir-1.11.4-ubuntu:20.04
 #
 #
 FROM erlang-23-ubuntu2004

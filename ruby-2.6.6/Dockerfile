@@ -8,10 +8,10 @@
 #    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/ruby-2.6.6/Dockerfile
 #
 #    # Build ruby image
-#    docker build -t ruby-2.6.6-ubuntu .
+#    docker build -t ruby-2.6.6-ubuntu:20.04 .
 #
 #    # Run the image
-#    docker run -it ruby-2.6.6-ubuntu
+#    docker run -it ruby-2.6.6-ubuntu:20.04
 #
 #
 FROM ubuntu:20.04
