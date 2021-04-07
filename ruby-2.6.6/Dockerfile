@@ -1,3 +1,19 @@
+# DESCRIPTION:   Ruby 2.6.6 container
+# AUTHOR:        Ricardson Williams <ricardsonwilliams@gmail.com.br>
+# COMMENTS:
+#    Build Ruby 2.6.6 based on Ubuntu 20.04
+#
+# USAGE:
+#    # Download Dockerfile
+#    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/ruby-2.6.6/Dockerfile
+#
+#    # Build ruby image
+#    docker build -t ruby-2.6.6-ubuntu .
+#
+#    # Run the image
+#    docker run -it ruby-2.6.6-ubuntu
+#
+#
 FROM ubuntu:20.04
 
 ENV RUBY_MAJOR 2.6
