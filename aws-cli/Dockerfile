@@ -1,5 +1,5 @@
 # DESCRIPTION:   aws-cli container
-# AUTHOR:        https://github.com/r1williams
+# AUTHOR:        https://github.com/r1w1s1
 # COMMENTS:
 #    Build aws-cli based on Ubuntu 20.04
 #
