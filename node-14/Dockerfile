@@ -1,11 +1,11 @@
 # DESCRIPTION:   Node 14 container
-# AUTHOR:        https://github.com/r1williams
+# AUTHOR:        https://github.com/r1w1s1
 # COMMENTS:
 #    Build Node 14 based on Ubuntu 20.04
 #
 # USAGE:
 #    # Download Dockerfile
-#    wget https://raw.githubusercontent.com/r1williams/dockerfiles/master/node-14/Dockerfile
+#    wget https://raw.githubusercontent.com/r1w1s1/dockerfiles/master/node-14/Dockerfile
 #
 #    # Build ruby image
 #    docker build -t node-14-ubuntu:20.04 .
