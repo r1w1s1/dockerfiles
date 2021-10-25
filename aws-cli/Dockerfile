@@ -5,7 +5,7 @@
 #
 # USAGE:
 #    # Download Dockerfile
-#    wget https://raw.githubusercontent.com/r1williams/dockerfiles/master/aws-cli/Dockerfile
+#    wget https://raw.githubusercontent.com/r1w1s1/dockerfiles/master/aws-cli/Dockerfile
 #
 #    # Build aws-cli image
 #    docker build -t aws-cli .
