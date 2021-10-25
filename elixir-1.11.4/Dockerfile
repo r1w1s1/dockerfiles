@@ -1,11 +1,11 @@
 # DESCRIPTION:  Elixir 1.11.4 container
-# AUTHOR:       https://github.com/r1williams
+# AUTHOR:       https://github.com/r1w1s1
 # COMMENTS:
 #    Build Elixir 1.11.4 based on Ubuntu 20.04 LTS
 #
 # USAGE:
 #    # Download Dockerfile
-#    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/elixir-1.11.4/Dockerfile
+#    wget https://raw.githubusercontent.com/r1w1s1/dockerfiles/master/elixir-1.11.4/Dockerfile
 #
 #    # Build ruby image
 #    docker build -t elixir-1.11.4-ubuntu:20.04 .

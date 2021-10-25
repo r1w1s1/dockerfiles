@@ -1,11 +1,11 @@
 # DESCRIPTION:  Erlang 23 container
-# AUTHOR:       https://github.com/r1williams
+# AUTHOR:       https://github.com/r1w1s1
 # COMMENTS:
 #    Build Erlang 23 based on Ubuntu 20.04 LTS
 #
 # USAGE:
 #    # Download Dockerfile
-#    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/erlang-23/Dockerfile
+#    wget https://raw.githubusercontent.com/r1w1s1/dockerfiles/master/erlang-23/Dockerfile
 #
 #    # Build ruby image
 #    docker build -t erlang-23-ubuntu:20.04 .
