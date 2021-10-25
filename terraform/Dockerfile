@@ -16,20 +16,19 @@
 #    # Add into .bashrc
 #    alias terraform='sudo docker run -it terraform'
 #
-FROM amazonlinux:2
+FROM ubuntu:20.04 as installer
 
-ENV TERRAFORM_VERSION=0.12.8
+ENV TERRAFORM_VERSION=1.0.9
 
 RUN \
-    yum -y install unzip \
+    apt-get update \
+    && apt-get install -y apt-utils curl zip \
     && curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip > terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
     && echo "${TERRAFORM_SHA256SUM}  terraform_${TERRAFORM_VERSION}_linux_amd64.zip" > terraform_${TERRAFORM_VERSION}_SHA256SUMS \
     && unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin \
     && rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
-###Final Image###
-
-FROM amazonlinux:2
+FROM ubuntu:20.04
 
 COPY --from=0 /bin/terraform /bin/terraform
 
