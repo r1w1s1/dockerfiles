@@ -1,11 +1,11 @@
 # DESCRIPTION:   Ruby 2.6.6 container
-# AUTHOR:        https://github.com/r1williams
+# AUTHOR:        https://github.com/r1w1s1
 # COMMENTS:
 #    Build Ruby 2.6.6 based on Ubuntu 20.04
 #
 # USAGE:
 #    # Download Dockerfile
-#    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/ruby-2.6.6/Dockerfile
+#    wget https://raw.githubusercontent.com/r1w1s1/dockerfiles/master/ruby-2.6.6/Dockerfile
 #
 #    # Build ruby image
 #    docker build -t ruby-2.6.6-ubuntu:20.04 .
@@ -101,11 +101,7 @@ RUN \
 FROM ubuntu:20.04
 
 ENV GEM_HOME /usr/local/bundle
-ENV RUBY_MAJOR=2.7 \
-    RUBY_VERSION=2.7.1 \
-    RUBYGEMS_VERSION=3.1.4 \
-    BUNDLER_VERSION=2.1.4 \
-    BUNDLE_PATH="$GEM_HOME" \
+ENV BUNDLE_PATH="$GEM_HOME" \
     BUNDLE_BIN="$GEM_HOME/bin" \
     BUNDLE_SILENCE_ROOT_WARNING=1 \
     BUNDLE_APP_CONFIG="$GEM_HOME"
