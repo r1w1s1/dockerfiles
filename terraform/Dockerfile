@@ -1,7 +1,7 @@
 # DESCRIPTION:   Terraform container
 # AUTHOR:        Ricardson Williams <ricardsonwilliams@gmail.com.br>
 # COMMENTS:
-#    Terraform build based on Amazon Linux 2 LTS (https://aws.amazon.com/amazon-linux-2/)
+#    Terraform build based on Ubuntu 20.04 LTS
 #
 # USAGE:
 #    # Download Dockerfile
