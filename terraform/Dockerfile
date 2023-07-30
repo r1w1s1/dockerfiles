@@ -1,7 +1,7 @@
 # DESCRIPTION:   Terraform container
-# AUTHOR:        Ricardson Williams <ricardsonwilliams@gmail.com.br>
+# AUTHOR:        Ricardson Williams <ricardsonwilliams@gmail.com>
 # COMMENTS:
-#    Terraform build based on Ubuntu 20.04 LTS
+#    Terraform build based on Almalinux 9
 #
 # USAGE:
 #    # Download Dockerfile
@@ -16,19 +16,19 @@
 #    # Add into .bashrc
 #    alias terraform='sudo docker run -it terraform'
 #
-FROM ubuntu:20.04 as installer
+FROM almalinux:9 as installer
 
-ENV TERRAFORM_VERSION=1.0.9
+ENV TERRAFORM_VERSION=1.5.4
 
 RUN \
-    apt-get update \
-    && apt-get install -y apt-utils curl zip \
+    dnf update \
+    && dnf install -y zip \
     && curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip > terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
     && echo "${TERRAFORM_SHA256SUM}  terraform_${TERRAFORM_VERSION}_linux_amd64.zip" > terraform_${TERRAFORM_VERSION}_SHA256SUMS \
     && unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin \
     && rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
-FROM ubuntu:20.04
+FROM almalinux:9-minimal
 
 COPY --from=0 /bin/terraform /bin/terraform
 
