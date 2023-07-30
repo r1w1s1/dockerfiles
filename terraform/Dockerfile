@@ -28,7 +28,7 @@ RUN \
     && unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin \
     && rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
 
-FROM almalinux:9-minimal
+FROM almalinux/9-micro
 
 COPY --from=0 /bin/terraform /bin/terraform
 
