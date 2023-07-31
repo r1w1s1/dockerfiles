@@ -1,7 +1,7 @@
 # DESCRIPTION:   aws-cli container
 # AUTHOR:        https://github.com/r1w1s1
 # COMMENTS:
-#    Build aws-cli based on Ubuntu 20.04
+#    Build aws-cli based on Almalinux 9
 #
 # USAGE:
 #    # Download Dockerfile
@@ -14,15 +14,17 @@
 #    docker run -it aws-cli
 #
 #
-FROM ubuntu:20.04 as installer
+FROM almalinux:9 as installer
 
-RUN apt-get update \
-    && apt-get install -y apt-utils curl zip \
+RUN dnf update \
+    && dnf install -y zip \
     && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
     && unzip awscliv2.zip \
     && ./aws/install --bin-dir /aws-cli-bin/
 
-FROM ubuntu:20.04
+FROM almalinux:9-minimal
+
+RUN microdnf install -y less groff
 
 COPY --from=installer /usr/local/aws-cli/ /usr/local/aws-cli/
 COPY --from=installer /aws-cli-bin/ /usr/local/bin/
