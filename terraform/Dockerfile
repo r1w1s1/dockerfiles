@@ -1,11 +1,11 @@
 # DESCRIPTION:   Terraform container
 # AUTHOR:        Ricardson Williams <ricardsonwilliams@gmail.com>
 # COMMENTS:
-#    Terraform build based on Almalinux 9
+#    Terraform build based on Almalinux 9 Micro
 #
 # USAGE:
 #    # Download Dockerfile
-#    wget https://raw.githubusercontent.com/ricardson/dockerfiles/master/terraform/Dockerfile
+#    wget https://raw.githubusercontent.com/r1w1s1/dockerfiles/master/terraform/Dockerfile
 #
 #    # Build image
 #    docker build -t terraform .
